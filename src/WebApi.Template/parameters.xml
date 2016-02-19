@@ -1,0 +1,15 @@
+﻿<parameters>
+  <parameter name="IIS Web Application Name" defaultValue="Default Web Site/WebApi.Template"/>
+  <parameter name="NHibernate Connection string" defaultValue="" >
+    <parameterEntry
+      kind="XmlFile"
+      scope="Website\\Web\.config$"
+      match="/configuration/connectionStrings/add[@name='NHibernateConnection']/@connectionString" />
+  </parameter>
+  <parameter name="LOGENTRIES_TOKEN" defaultValue="">
+    <parameterEntry
+      kind="XmlFile"
+      scope="Website\\Web\.config$"
+      match="/configuration/appSettings/add[@key='LOGENTRIES_TOKEN']/@value" />
+  </parameter>
+</parameters>
